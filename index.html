@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>새달사 슬롯머신 통합버전</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="firebase.js"></script>
+</head>
+<body>
+  <h1>새달사 복귀 슬롯머신</h1>
+
+  <audio id="spinSound" src="assets/sounds/spin.mp3" preload="auto"></audio>
+  <audio id="stopSound" src="assets/sounds/stop.mp3" preload="auto"></audio>
+  <audio id="winSound" src="assets/sounds/win.mp3" preload="auto"></audio>
+
+  <div id="stats">코인: <span id="coins">5000</span> | 프리턴: <span id="freespins">0</span> | 라운드: <span id="round">1</span></div>
+  <div id="item-effect">아이템: 없음</div>
+  <div class="slot-container" id="grid"></div>
+  <button onclick="handleSpin()">돌리기</button>
+  <button onclick="toggleAuto()">자동: <span id="autotext">OFF</span></button>
+  <div id="result"></div>
+  <h3>실시간 랭킹</h3><div id="ranking-list"></div>
+  <div id="ranking"></div>
+  <div id="restart"><button onclick="location.reload()">재시작하기</button></div>
+
+  <script src="game.js"></script>
+</body>
+</html>
